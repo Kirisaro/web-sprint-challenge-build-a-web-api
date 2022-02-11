@@ -92,22 +92,22 @@ The description of the structure and extra information about each _resource_ sto
 
 #### Projects
 
-| Field       | Data Type | Metadata                                                                    |
-| ----------- | --------- | --------------------------------------------------------------------------- |
-| id          | number    | do not provide it when creating projects, the database will generate it     |
-| name        | string    | required                                                                    |
-| description | string    | required                                                                    |
-| completed   | boolean   | not required, defaults to false when creating projects                      |
+| Field       | Data Type | Metadata                                                                |
+| ----------- | --------- | ----------------------------------------------------------------------- |
+| id          | number    | do not provide it when creating projects, the database will generate it |
+| name        | string    | required                                                                |
+| description | string    | required                                                                |
+| completed   | boolean   | not required, defaults to false when creating projects                  |
 
 #### Actions
 
-| Field       | Data Type | Metadata                                                                                         |
-| ----------- | --------- | ------------------------------------------------------------------------------------------------ |
-| id          | number    | do not provide it when creating actions, the database will generate it                           |
-| project_id  | number    | required, must be the id of an existing project                                                  |
-| description | string    | required, up to 128 characters long                                                              |
-| notes       | string    | required, no size limit. Used to record additional notes or requirements to complete the action  |
-| completed   | boolean   | not required, defaults to false when creating actions                                            |
+| Field       | Data Type | Metadata                                                                                        |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| id          | number    | do not provide it when creating actions, the database will generate it                          |
+| project_id  | number    | required, must be the id of an existing project                                                 |
+| description | string    | required, up to 128 characters long                                                             |
+| notes       | string    | required, no size limit. Used to record additional notes or requirements to complete the action |
+| completed   | boolean   | not required, defaults to false when creating actions                                           |
 
 ### Database Persistence Helpers
 
@@ -147,7 +147,16 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+   We use node to write server code that lets web services communicate with clients using JSON, while Express is a framework that sits on top of Node.js, makes it easier to create web applications and services.
+
 1. Understand and explain the use of Middleware.
+   Middleware are functions used in connecting isolated systems to interact and perform certain tasks. They execute code, make changes to any part of the code, and use request and response objects to modify request and response objects.
+
 1. The basic principles of the REST architectural style.
+   REST is a set of principles and constraints. They are recommendations and not a standard. The things to keep in mind in REST are: everything is a resource, each resource is accessible via a unique URL, resources can have multiple representations, communication happens over stateless protocol (HTTP), and resource management happens via HTTP methods.
+
 1. Understand and explain the use of Express Routers.
+   An express Router behaves like a mini express application, it can have its own routing and middleware, but it needs to exist inside an express application.
+
 1. Describe tooling used to manually test the correctness of an API.
+   HTTPIE, POSTMAN, and CURL are all used to manually test API endpoints.
